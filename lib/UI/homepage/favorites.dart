@@ -1,7 +1,13 @@
 import 'package:flutter/material.dart';
 
 
-class FavoritesWidget extends StatelessWidget {
+class FavoritesWidget extends StatefulWidget {
+  @override
+  State<FavoritesWidget> createState() => _FavoritesWidget();
+}
+
+
+class _FavoritesWidget extends State<FavoritesWidget> {
 
   List<items> itemLst = Items;
 
@@ -30,16 +36,47 @@ class FavoritesWidget extends StatelessWidget {
                       Padding(
                         padding: const EdgeInsets.only(top: 12),
                         child: Row(
+                            mainAxisAlignment: MainAxisAlignment.start,
                             children: [
-                              SizedBox(
+                              Container(
                                   height: 80,
                                   width: 80,
-                                  child: Image.asset("assets/images/${itemLst[index].image}", fit: BoxFit.contain,)
+                                  decoration: BoxDecoration(
+                                    color: Colors.transparent,
+                                    borderRadius: BorderRadius.circular(20)
+                                  ),
+                                child: ClipRRect(
+                                  borderRadius: BorderRadius.circular(12),
+                                    child: Image.asset("assets/images/${itemLst[index].image}", fit: BoxFit.contain,)),
                               ),
-                              Text(itemLst[index].title, style: const TextStyle(
-                                  fontWeight: FontWeight.w500,
-                                  fontSize: 16
-                              ),)
+                              Padding(
+                                padding: const EdgeInsets.only(left: 8.0),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    SizedBox(
+                                      width: 250,
+                                      height: 30,
+                                      child: Text(itemLst[index].title, style: const TextStyle(
+                                          fontWeight: FontWeight.w600,
+                                          fontSize: 20
+                                      ),),
+                                    ),
+                                    const Text('Unknowauthor', style: TextStyle(
+                                      fontSize: 14,
+                                      fontWeight: FontWeight.w400,
+                                      color: Colors.grey
+                                    ),)
+                                  ],
+                                ),
+                              ),
+                              Expanded(
+                                child: SizedBox(
+                                    width: 30,
+                                    height: 30,
+                                    child: Image.asset("assets/icons/heart.png")
+                                ),
+                              )
                             ]
                         ),
                       ),

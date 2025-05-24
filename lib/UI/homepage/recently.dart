@@ -37,7 +37,9 @@ class _RecentlyWidgetState extends State<RecentlyWidget> {
                       Padding(
                         padding: const EdgeInsets.only(right: 8.0),
                         child: Card(
-                          child: Image.asset("assets/images/${itemLst[index].image}", fit: BoxFit.contain,),
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(20),
+                              child: Image.asset("assets/images/${itemLst[index].image}", fit: BoxFit.contain,)),
                         ),
                       ),
                       Text(itemLst[index].title, style: const TextStyle(

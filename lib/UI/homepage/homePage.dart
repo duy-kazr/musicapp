@@ -62,6 +62,7 @@ class MusicAppScreen extends State<MusicApp>{
                                   hintText: 'Search...',
                                   hintStyle: TextStyle(color: Colors.grey), // Thay đổi màu của hintText ở đây
                                 ),
+                                style: TextStyle(color: Colors.black),
                               ),
                             ),
                             Image.asset('assets/icons/search.png'),
