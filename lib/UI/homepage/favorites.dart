@@ -3,11 +3,11 @@ import 'package:flutter/material.dart';
 
 class FavoritesWidget extends StatefulWidget {
   @override
-  State<FavoritesWidget> createState() => _FavoritesWidget();
+  State<FavoritesWidget> createState() => _FavoritesWidgetState();
 }
 
 
-class _FavoritesWidget extends State<FavoritesWidget> {
+class _FavoritesWidgetState extends State<FavoritesWidget> {
 
   List<items> itemLst = Items;
 

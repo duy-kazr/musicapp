@@ -7,19 +7,16 @@ import '../homepage/favorites.dart';
 
 
 // HomePage screen
-class MusicApp extends StatefulWidget {
+class HomepageWidget extends StatefulWidget {
 
-  MusicApp({super.key});
+  const HomepageWidget({super.key});
 
   @override
-  MusicAppScreen createState() => MusicAppScreen();
+  State<HomepageWidget> createState() => _HomepageWidgetState();
 
 }
 
-class MusicAppScreen extends State<MusicApp>{
-
-  MusicAppScreen();
-
+class _HomepageWidgetState extends State<HomepageWidget>{
   List<items> itemLst = Items;
 
 
