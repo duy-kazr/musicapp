@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:musicapp/UI/homepage/homePage.dart';
+import 'package:musicapp/UI/account/login.dart';
+
 
 void main() {
   WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
@@ -31,6 +33,6 @@ class MusicAppSplashState extends State<MusicApp>{
 
   @override
   Widget build(BuildContext context) {
-    return const HomepageWidget();
+    return const LoginWidget();
   }
 }
