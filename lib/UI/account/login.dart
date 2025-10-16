@@ -1,20 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
-// Sign in google and get access token to read and write on drive
-final GoogleSignIn _googleSignIn = GoogleSignIn(
-  scopes: [
-    'email',
-    'https://www.googleapis.com/auth/drive.file',
-  ],
-);
-
-Future<String?> signInAndGetAccessToken() async {
-  final account = await _googleSignIn.signIn();
-  final auth = await account?.authentication;
-  return auth?.accessToken;
-}
-
 
 //Build UI for Sign in screen
 class LoginWidget extends StatefulWidget{
@@ -46,11 +32,11 @@ class _LoginWidgetState extends State<LoginWidget> {
               textDirection: TextDirection.ltr,
               style: TextStyle( fontWeight: FontWeight.w900, fontSize: 24, color: Colors.white),
             ),
-            const SizedBox(height: 12,),
+            const SizedBox(height: 50,),
             Directionality(
               textDirection: TextDirection.ltr,
               child: SizedBox(
-                width: 200,
+                width: 220,
                 height: 50,
                 child: ElevatedButton(
                     onPressed: (){},
@@ -64,6 +50,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                         Image.asset("assets/icons/google_icon.png",
                           width: 40,
                           height: 40,
+                          fit: BoxFit.contain,
                         ),
                       ],
                     )

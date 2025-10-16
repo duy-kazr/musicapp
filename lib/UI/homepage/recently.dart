@@ -17,17 +17,17 @@ class _RecentlyWidgetState extends State<RecentlyWidget> {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         const Text("Recently play",
-          style: TextStyle( fontSize: 28, fontWeight: FontWeight.w600),),
+          style: TextStyle( fontSize: 22, fontWeight: FontWeight.w600),),
         SizedBox(
-          height: 150,
+          height: 250,
           child: ListView.builder(
             scrollDirection: Axis.horizontal,
             itemCount: itemLst.length,
             itemBuilder: (BuildContext context, int index) {
               return
                 Container(
-                  height: 125,
-                  width: 125,
+                  height: 225,
+                  width: 225,
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(34),
                       color: Colors.transparent
@@ -44,7 +44,7 @@ class _RecentlyWidgetState extends State<RecentlyWidget> {
                       ),
                       Text(itemLst[index].title, style: const TextStyle(
                           fontWeight: FontWeight.w500,
-                          fontSize: 16
+                          fontSize: 18
                       ),)
                     ],
                   ),

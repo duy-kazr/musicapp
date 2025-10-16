@@ -18,7 +18,8 @@ class _PlaylistWidgetState extends State<PlaylistWidget> {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         const Text("Your playlist",
-          style: TextStyle( fontSize: 28, fontWeight: FontWeight.w600),),
+          style: TextStyle( fontSize: 22, fontWeight: FontWeight.w600),),
+        const SizedBox(height: 10,),
         SizedBox(
           height: 150,
           child: GridView.builder(
@@ -74,7 +75,7 @@ class _PlaylistWidgetState extends State<PlaylistWidget> {
                             Container(
                               padding: const EdgeInsets.only(left: 5.0, top: 5),
                               child: Text(
-                                itemLst[index].author,
+                                itemLst[index].owner,
                                 maxLines: 1,
                                 overflow: TextOverflow.ellipsis,
                                 style: const TextStyle(
@@ -103,11 +104,11 @@ class _PlaylistWidgetState extends State<PlaylistWidget> {
 class items {
   late String image;
   late String title;
-  late String author;
+  late String owner;
 
-  items({required this.image, required this.title, required this.author});
+  items({required this.image, required this.title, required this.owner});
 }
-List<items> Items = [items(image: "V.jpg", title: "Chaos", author: "Kiiva"),
-  items(image: "V.jpg", title: "Brain Power", author: "Nova"),
-  items(image: "V.jpg", title: "Anima", author: "V.I")
+List<items> Items = [items(image: "V.jpg", title: "Playlist1", owner: "username"),
+  items(image: "V.jpg", title: "Playlist2", owner: "username"),
+  items(image: "V.jpg", title: "Playlist3", owner: "username")
 ];

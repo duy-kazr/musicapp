@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import '../homepage/playlist.dart';
 import '../homepage/recently.dart';
 import '../homepage/favorites.dart';
@@ -19,64 +18,10 @@ class HomepageWidget extends StatefulWidget {
 class _HomepageWidgetState extends State<HomepageWidget>{
   List<items> itemLst = Items;
 
-
-
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
-    return MaterialApp(
-      theme: ThemeData.dark(),
-      home: Scaffold(
-          appBar: AppBar(
-            toolbarHeight: 70,
-            backgroundColor: Colors.black,
-            actions: [
-              Expanded(
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Padding(
-                      padding:  const EdgeInsets.only(left: 25, top: 0, right: 25, bottom: 0),
-                      child: Container(
-                        height: 46,
-                        width: 300,
-                        decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(23)
-                        ),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Container(
-                              padding: const EdgeInsets.only(left: 10),
-                              width: 250,
-                              child: const TextField(
-                                //controller: _searchController,
-                                decoration: InputDecoration(
-                                  border: InputBorder.none,
-                                  enabledBorder: InputBorder.none,
-                                  focusedBorder: InputBorder.none,
-                                  hintText: 'Search...',
-                                  hintStyle: TextStyle(color: Colors.grey), // Thay đổi màu của hintText ở đây
-                                ),
-                                style: TextStyle(color: Colors.black),
-                              ),
-                            ),
-                            Image.asset('assets/icons/search.png'),
-                          ],
-                        ),
-                      ),
-                    ),
-                    const CircleAvatar(
-                      radius: 25,
-                      backgroundImage: AssetImage('assets/images/V.jpg'),
-                    ),
-                  ],
-                ),
-              )
-            ],
-          ),
-          body: Container(
+    return Container(
             padding: const EdgeInsets.only(left: 25, top: 30, right: 15),
             child: SingleChildScrollView(
               child: Column(
@@ -87,10 +32,7 @@ class _HomepageWidgetState extends State<HomepageWidget>{
                 ],
               ),
             )
-          ),
-        ),
-      debugShowCheckedModeBanner: false,
-    );
+          );
   }
 }
 

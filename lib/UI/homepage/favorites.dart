@@ -17,7 +17,7 @@ class _FavoritesWidgetState extends State<FavoritesWidget> {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         const Text("Your Favorites",
-          style: TextStyle( fontSize: 28, fontWeight: FontWeight.w600),),
+          style: TextStyle( fontSize: 22, fontWeight: FontWeight.w600),),
         SizedBox(
           height: itemLst.length*92,
           child: ListView.builder(
