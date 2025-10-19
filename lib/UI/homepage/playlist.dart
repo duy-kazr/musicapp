@@ -18,7 +18,7 @@ class _PlaylistWidgetState extends State<PlaylistWidget> {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         const Text("Your playlist",
-          style: TextStyle( fontSize: 22, fontWeight: FontWeight.w600),),
+          style: TextStyle( fontSize: 20, fontWeight: FontWeight.w400),),
         const SizedBox(height: 10,),
         SizedBox(
           height: 150,
@@ -68,7 +68,7 @@ class _PlaylistWidgetState extends State<PlaylistWidget> {
                                 overflow: TextOverflow.ellipsis,
                                 style: const TextStyle(
                                     fontSize: 18,
-                                    fontWeight: FontWeight.w700
+                                    fontWeight: FontWeight.w300
                                 ),
                               ),
                             ),

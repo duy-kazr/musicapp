@@ -17,7 +17,7 @@ class _RecentlyWidgetState extends State<RecentlyWidget> {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         const Text("Recently play",
-          style: TextStyle( fontSize: 22, fontWeight: FontWeight.w600),),
+          style: TextStyle( fontSize: 20, fontWeight: FontWeight.w400),),
         SizedBox(
           height: 250,
           child: ListView.builder(
@@ -43,7 +43,7 @@ class _RecentlyWidgetState extends State<RecentlyWidget> {
                         ),
                       ),
                       Text(itemLst[index].title, style: const TextStyle(
-                          fontWeight: FontWeight.w500,
+                          fontWeight: FontWeight.w300,
                           fontSize: 18
                       ),)
                     ],

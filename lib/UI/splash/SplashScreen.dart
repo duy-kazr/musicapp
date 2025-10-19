@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+
 import 'package:flutter_native_splash/flutter_native_splash.dart';
-import 'package:musicapp/UI/homepage/homeScreen.dart';
+import 'package:musicapp/UI/homepage/mainScreen.dart';
 import 'package:musicapp/UI/account/login.dart';
+import '../homepage/miniPlayer.dart';
+
+
 
 class Splashscreen extends StatefulWidget{
   @override
@@ -25,6 +30,8 @@ class SplashScreenState extends State<Splashscreen>{
 
   @override
   Widget build(BuildContext context) {
-    return const HomeScreenWidget();
+    return ChangeNotifierProvider(
+        create: (context) => MusicPlayerModel(),
+        child: HomeScreenWidget());
   }
 }
