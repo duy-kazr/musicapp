@@ -17,18 +17,40 @@ class _PlaylistWidgetState extends State<PlaylistWidget> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const Text("Your playlists",
+        const Text("Playlist",
           style: TextStyle( fontSize: 20, fontWeight: FontWeight.w400),),
         const SizedBox(height: 10,),
+        Container(
+          height: 60,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(12),
+          ),
+          child: Row(
+            children: [
+              Container(
+                width:  60,
+                height: 60,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(12),
+                ),
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(12), // Bo góc của ảnh
+                  child: Image.asset(
+                    "assets/icons/plus-icon.jpg",
+                    fit: BoxFit.cover,
+                  ),
+                ),
+              ),
+              const Text("Create a playlist", style: TextStyle(fontSize: 16, fontWeight: FontWeight.w300),)
+            ],
+          ),
+        ),
+        const SizedBox(height: 10,),
         SizedBox(
-          height: 150,
-          child: GridView.builder(
-            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 2,
-                mainAxisSpacing: 16,
-                crossAxisSpacing: 16,
-                childAspectRatio: 3
-            ),
+          height: itemLst.length * 70,
+          child: ListView.separated(
+            physics: const NeverScrollableScrollPhysics(),
+            separatorBuilder: (context, index) => const SizedBox(height: 10,),
             itemCount: itemLst.length,
             itemBuilder: (context, index) {
               return Container(
@@ -36,7 +58,6 @@ class _PlaylistWidgetState extends State<PlaylistWidget> {
                   width: 160,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(12),
-                    color: Colors.white10,
                   ),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.start,
@@ -95,7 +116,6 @@ class _PlaylistWidgetState extends State<PlaylistWidget> {
         ),
       ],
     );
-
   }
 }
 

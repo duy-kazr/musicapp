@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 
 import '../homepage/homePage.dart';
 import '../homepage/miniPlayer.dart';
+import 'package:musicapp/UI/library/library.dart';
 
 
 
@@ -32,9 +33,9 @@ class _HomeScreenWidgetState extends State<HomeScreenWidget>{
   @override
   Widget build(BuildContext context) {
     final ThemeData theme = Theme.of(context);
-    List<Widget> _pages = const [
+    List<Widget> _pages = [
       HomepageWidget(),
-      HomepageWidget(),
+      LibraryWidget(),
       HomepageWidget(),
     ];
 
@@ -108,7 +109,7 @@ class _HomeScreenWidgetState extends State<HomeScreenWidget>{
             //Tab album
             BottomNavigationBarItem(
               icon: Icon(Icons.library_music_outlined),
-              label: "Album",
+              label: "Library",
             ),
             //Tab profile
             BottomNavigationBarItem(

@@ -19,15 +19,15 @@ class _RecentlyWidgetState extends State<RecentlyWidget> {
         const Text("Recently play",
           style: TextStyle( fontSize: 20, fontWeight: FontWeight.w400),),
         SizedBox(
-          height: 250,
+          height: 230,
           child: ListView.builder(
             scrollDirection: Axis.horizontal,
             itemCount: itemLst.length,
             itemBuilder: (BuildContext context, int index) {
               return
                 Container(
-                  height: 225,
-                  width: 225,
+                  height: 200,
+                  width: 200,
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(34),
                       color: Colors.transparent
@@ -42,7 +42,11 @@ class _RecentlyWidgetState extends State<RecentlyWidget> {
                               child: Image.asset("assets/images/${itemLst[index].image}", fit: BoxFit.contain,)),
                         ),
                       ),
-                      Text(itemLst[index].title, style: const TextStyle(
+                      Text(
+                        itemLst[index].title,
+                        maxLines: 1,
+                        style: const TextStyle(
+                          overflow: TextOverflow.ellipsis,
                           fontWeight: FontWeight.w300,
                           fontSize: 18
                       ),)
